@@ -1,0 +1,101 @@
+/* ✅ Хүүхэд B: Өнгө + загварыг эндээс өөрчилнө */
+:root{
+  --bg: #0f1220;
+  --card: #171a2d;
+  --text: #eef0ff;
+  --muted:#b8bce6;
+  --accent:#7cf0ff;
+  --border: rgba(255,255,255,.12);
+}
+
+*{ box-sizing: border-box; }
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 22px;
+}
+
+/* Hero */
+.hero{
+  background: linear-gradient(135deg, rgba(124,240,255,.20), rgba(180,120,255,.18));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+.badge{
+  display:inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.25);
+  border: 1px solid var(--border);
+  font-size: 13px;
+}
+h1{ margin: 10px 0 6px; }
+.sub{ margin:0; color: var(--muted); }
+
+.accent{ color: var(--accent); }
+
+.tags{ margin-top: 12px; display:flex; gap:8px; flex-wrap: wrap; }
+.tags span{
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.25);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+/* 2 card grid */
+.grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+@media (max-width: 800px){
+  .grid{ grid-template-columns: 1fr; }
+}
+
+/* Cards */
+.card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+}
+.card p, .card li{ color: var(--muted); }
+
+/* Projects */
+.projects{
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+}
+.project-list{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+@media (max-width: 900px){
+  .project-list{ grid-template-columns: 1fr; }
+}
+.project{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px;
+}
+/* ✅ Хүүхэд B: hover эффект нэмэхэд амар */
+.project:hover{
+  transform: translateY(-2px);
+}
+
+/* Footer */
+.footer{
+  margin-top: 14px;
+  text-align: center;
+  color: var(--muted);
+}
